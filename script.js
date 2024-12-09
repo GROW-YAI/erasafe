@@ -14,3 +14,16 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         event.preventDefault();
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const serviceCards = document.querySelector('.service-cards');
+    const cards = document.querySelectorAll('.card');
+    
+    cards.forEach(card => {
+        const clone = card.cloneNode(true);
+        serviceCards.appendChild(clone);
+    });
+
+    const totalWidth = cards.length * 2 * (cards[0].offsetWidth + 10); // 10px gap
+    serviceCards.style.width = `${totalWidth}px`;
+});
