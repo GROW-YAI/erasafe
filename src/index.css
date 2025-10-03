@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+
+@tailwind utilities;
+
+/* Optional custom colors and styles */
+:root {
+  --green: #22c55e; /* Tailwind green-500 */
+  --orange: #f97316; /* Tailwind orange-500 */
+}
+
+.bg-green { background-color: var(--green); }
+.text-green { color: var(--green); }
+.bg-orange { background-color: var(--orange); }
+.text-orange { color: var(--orange); }
