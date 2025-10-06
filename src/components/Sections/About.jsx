@@ -1,8 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
-import hero2 from "../../assets/images/hero2.jpg"; // Replace with an appropriate image for About
+import hero2 from "../../assets/images/hero3.jpg"; // Replace with an appropriate image for About
 
 export default function About() {
+
+
+   const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section id="about" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-10">
@@ -39,9 +47,12 @@ export default function About() {
           <p className="text-gray-700 mb-6 text-base sm:text-lg md:text-lg">
             The system features a GPS tracker and a management interface to monitor driver safety, sending alerts if a driver is unfit for duty. SafeDrive promotes proactive health management and responsible driving habits for safer roads.
           </p>
-          <button className="bg-orange text-white py-3 px-6 rounded shadow hover:bg-green transition-colors w-max mx-auto md:mx-0">
-            Learn More
-          </button>
+          <button
+              onClick={scrollToContact}
+              className="bg-orange text-white py-3 px-6 rounded w-max mx-auto md:mx-0 hover:bg-green transition-colors"
+            >
+              Learn More
+            </button>
         </motion.div>
       </div>
     </section>
