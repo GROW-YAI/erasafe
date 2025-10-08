@@ -17,7 +17,7 @@ export default function ProductDisplay() {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        Product Gallery
+        Product 
       </motion.h2>
 
       {/* Gallery Grid */}
