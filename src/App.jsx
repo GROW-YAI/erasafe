@@ -2,11 +2,12 @@ import React from "react";
 import Navbar from "./components/layout/Navbar";
 import HeroSlider from "./components/layout/HeroSlider";
 import About from "./components/sections/About";
-import ProductDisplay from "./components/sections/ProductDisplay";
 import Features from "./components/sections/Features";
-import Innovator from "./components/sections/Innovator";
+
 import ContactForm from "./components/sections/ContactForm";
 import Footer from "./components/layout/Footer";
+import ProductDisplay from "./components/Sections/ProductDisplay";
+import Innovator from "./components/Sections/Innovator";
 
 function App() {
   return (
@@ -15,9 +16,9 @@ function App() {
       <main className="mt-16">
         <HeroSlider />
         <About />
-        <ProductDisplay />
+        <ProductDisplay/>
         <Features />
-        <Innovator />
+        <Innovator/>
         <ContactForm />
       </main>
       <Footer />
