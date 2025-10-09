@@ -1,4 +1,3 @@
-// src/components/sections/Innovator.jsx
 import React from "react";
 import { motion } from "framer-motion";
 import inventorPhoto from "../../assets/images/innovator2.jpg";

@@ -1,4 +1,3 @@
-// src/components/sections/Features.jsx
 import React from "react";
 import { motion } from "framer-motion";
 import Card from "../common/Card";
@@ -105,7 +104,7 @@ export default function Features() {
         })}
       </motion.div>
 
-      <style jsx>{`
+      <style >{`
         /* micro-interaction: change icon color on card hover/focus */
         /* Note: Tailwind can't easily target child SVG color from parent hover without extra classes,
            so we use a small CSS rule that applies when the parent card is hovered/focused. */
