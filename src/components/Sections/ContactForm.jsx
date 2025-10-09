@@ -1,4 +1,3 @@
-// src/components/sections/ContactForm.jsx
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Input from "../common/Input";
