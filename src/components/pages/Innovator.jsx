@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import inventorPhoto from "../../assets/images/innovator2.jpg";
 
 export default function Innovator() {
   return (
@@ -15,7 +14,7 @@ export default function Innovator() {
         {/* Photo */}
         <div className="flex-shrink-0">
           <img
-            src={inventorPhoto}
+            src="/images/innovator2.jpg"
             alt="Eluzai Dorm Demakpor — Innovator, ERA SAFEDRIVE"
             className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover ring-4 ring-white/20 shadow-xl"
           />
@@ -25,14 +24,22 @@ export default function Innovator() {
         <div className="flex-1">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-green">Eluzai Dorm Demakpor</h3>
-              <p className="text-sm text-gray-600 mt-1">Electrical & Electronic Engineering • Founder of ERA SAFEDRIVE</p>
+              <h3 className="text-2xl md:text-3xl font-bold text-green">
+                Eluzai Dorm Demakpor
+              </h3>
+              <p className="text-sm text-gray-600 mt-1">
+                Electrical & Electronic Engineering • Founder of ERA SAFEDRIVE
+              </p>
             </div>
 
             <div className="flex items-center gap-4">
-              {/* small badges / quick stats */}
-              <div className="bg-white/10 px-3 py-1 rounded-full text-sm font-medium">Student Innovator</div>
-              <div className="bg-white/10 px-3 py-1 rounded-full text-sm font-medium">Road Safety Advocate</div>
+              {/* Small badges / quick stats */}
+              <div className="bg-white/10 px-3 py-1 rounded-full text-sm font-medium">
+                Student Innovator
+              </div>
+              <div className="bg-white/10 px-3 py-1 rounded-full text-sm font-medium">
+                Road Safety Advocate
+              </div>
             </div>
           </div>
 
@@ -52,14 +59,14 @@ export default function Innovator() {
               href="#contact"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" });
               }}
               className="inline-block bg-orange text-white px-5 py-3 rounded-md font-semibold hover:bg-green transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange/50"
             >
               Contact Eluzai
             </a>
-
-            
           </div>
         </div>
       </motion.div>

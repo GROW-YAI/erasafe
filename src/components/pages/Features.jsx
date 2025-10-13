@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Card from "../common/Card";
+import Card from "../ui/Card";
 import { Beer, HeartPulse, Zap } from "lucide-react";
 
 /**

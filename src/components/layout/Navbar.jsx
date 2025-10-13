@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import logo from "../../assets/images/logo2.jpg";
 
 export default function Navbar() {
   const [active, setActive] = useState("home");
@@ -19,7 +18,10 @@ export default function Navbar() {
         const el = document.getElementById(sec);
         return el ? { id: sec, offset: el.offsetTop } : { id: sec, offset: 0 };
       });
-      const currentSection = offsets.reverse().find((s) => scrollPos + 200 >= s.offset) || { id: "home" };
+
+      const currentSection =
+        offsets.reverse().find((s) => scrollPos + 200 >= s.offset) || { id: "home" };
+
       setActive(currentSection.id);
     };
 
@@ -44,15 +46,26 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center h-20">
         {/* Logo */}
-        <div className="flex items-center cursor-pointer" onClick={() => scrollToSection("home")}>
-          <img src={logo} alt="ERA SAFEDRIVE" className="h-10 w-auto" />
+        <div
+          className="flex items-center cursor-pointer"
+          onClick={() => scrollToSection("home")}
+        >
+          <img
+            src="/images/logo2.jpg"
+            alt="ERA SAFEDRIVE"
+            className="h-10 w-auto"
+          />
           <span className="ml-2 font-bold text-green text-xl">ERA SAFEDRIVE</span>
         </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 font-medium text-gray-700 relative">
           {sections.map((sec) => (
-            <li key={sec} className="relative cursor-pointer" onClick={() => scrollToSection(sec)}>
+            <li
+              key={sec}
+              className="relative cursor-pointer"
+              onClick={() => scrollToSection(sec)}
+            >
               <motion.div whileHover={{ scale: 1.1 }} className="py-2">
                 {sec.charAt(0).toUpperCase() + sec.slice(1)}
               </motion.div>
