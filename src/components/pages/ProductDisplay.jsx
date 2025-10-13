@@ -1,11 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import product1 from "../../assets/images/product1.jpg";
-import product2 from "../../assets/images/product2.jpg";
-import product3 from "../../assets/images/product3.jpg";
 
 export default function ProductDisplay() {
-  const images = [product1, product2, product3];
+  const images = [
+    "/images/product1.jpg",
+    "/images/product2.jpg",
+    "/images/product3.jpg",
+  ];
 
   return (
     <section id="product" className="py-20 px-4 max-w-6xl mx-auto">
@@ -17,7 +18,7 @@ export default function ProductDisplay() {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        Product 
+        Product
       </motion.h2>
 
       {/* Gallery Grid */}
@@ -49,7 +50,8 @@ export default function ProductDisplay() {
 
       {/* Optional caption */}
       <p className="text-center text-gray-600 mt-10 max-w-3xl mx-auto leading-relaxed">
-        A cutting-edge Driver Wellness Device designed to monitor and enhance driver safety through innovative sensor technology and ergonomic design.
+        A cutting-edge Driver Wellness Device designed to monitor and enhance
+        driver safety through innovative sensor technology and ergonomic design.
       </p>
     </section>
   );

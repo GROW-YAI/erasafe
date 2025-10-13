@@ -1,13 +1,13 @@
 import React from "react";
 import Navbar from "./components/layout/Navbar";
 import HeroSlider from "./components/layout/HeroSlider";
-import About from "./components/sections/About";
-import Features from "./components/sections/Features";
+import About from "./components/pages/About";
+import Features from "./components/pages/Features";
 
-import ContactForm from "./components/sections/ContactForm";
+import ContactForm from "./components/pages/ContactForm";
 import Footer from "./components/layout/Footer";
-import ProductDisplay from "./components/Sections/ProductDisplay";
-import Innovator from "./components/Sections/Innovator";
+import ProductDisplay from "./components/pages/ProductDisplay";
+import Innovator from "./components/pages/Innovator";
 
 function App() {
   return (

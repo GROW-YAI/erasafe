@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import logo from "../../assets/images/logo2.jpg";
 
 export default function Footer() {
   return (
@@ -16,7 +15,7 @@ export default function Footer() {
         {/* Logo and Brand Info */}
         <div className="flex flex-col items-center md:items-start">
           <img
-            src={logo}
+            src="/images/logo2.jpg"
             alt="ERA SAFEDRIVE"
             className="w-20 h-20 rounded-full mb-3"
           />
