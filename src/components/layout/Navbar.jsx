@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function Navbar() {
-  const [active, setActive] = useState("home");
+  const [active, setActive] = useState("hero");
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const sections = ["home", "about", "product", "features", "innovator", "contact"];
+  // IDs must match your sections' actual ids in the page
+  const sections = ["hero", "about", "product", "features", "innovator", "contact"];
 
-  // Update active link on scroll
   useEffect(() => {
     const handleScroll = () => {
       const scrollPos = window.scrollY;
@@ -20,7 +20,7 @@ export default function Navbar() {
       });
 
       const currentSection =
-        offsets.reverse().find((s) => scrollPos + 200 >= s.offset) || { id: "home" };
+        offsets.reverse().find((s) => scrollPos + 200 >= s.offset) || { id: "hero" };
 
       setActive(currentSection.id);
     };
@@ -46,31 +46,18 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center h-20">
         {/* Logo */}
-        <div
-          className="flex items-center cursor-pointer"
-          onClick={() => scrollToSection("home")}
-        >
-          <img
-            src="/images/logo2.jpg"
-            alt="ERA SAFEDRIVE"
-            className="h-10 w-auto"
-          />
+        <div className="flex items-center cursor-pointer" onClick={() => scrollToSection("hero")}>
+          <img src="/images/logo2.jpg" alt="ERA SAFEDRIVE" className="h-10 w-auto" />
           <span className="ml-2 font-bold text-green text-xl">ERA SAFEDRIVE</span>
         </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 font-medium text-gray-700 relative">
           {sections.map((sec) => (
-            <li
-              key={sec}
-              className="relative cursor-pointer"
-              onClick={() => scrollToSection(sec)}
-            >
+            <li key={sec} className="relative cursor-pointer" onClick={() => scrollToSection(sec)}>
               <motion.div whileHover={{ scale: 1.1 }} className="py-2">
-                {sec.charAt(0).toUpperCase() + sec.slice(1)}
+                {sec === "hero" ? "Home" : sec.charAt(0).toUpperCase() + sec.slice(1)}
               </motion.div>
-
-              {/* Animated underline */}
               {active === sec && (
                 <motion.div
                   layoutId="underline"
@@ -109,7 +96,7 @@ export default function Navbar() {
               }`}
               onClick={() => scrollToSection(sec)}
             >
-              {sec.charAt(0).toUpperCase() + sec.slice(1)}
+              {sec === "hero" ? "Home" : sec.charAt(0).toUpperCase() + sec.slice(1)}
             </li>
           ))}
         </motion.ul>
