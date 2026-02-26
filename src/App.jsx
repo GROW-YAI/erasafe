@@ -8,10 +8,12 @@ import ContactForm from "./components/pages/ContactForm";
 import Footer from "./components/layout/Footer";
 import ProductDisplay from "./components/pages/ProductDisplay";
 import Innovator from "./components/pages/Innovator";
+import BoafoWidgetInitializer from "./components/BoafoWidgetInitializer";
 
 function App() {
   return (
     <div className="font-sans scroll-smooth">
+      <BoafoWidgetInitializer />
       <Navbar />
       <main className="mt-16">
         <HeroSlider />
